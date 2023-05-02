@@ -1,0 +1,10 @@
+{
+    "html.completion.attributeDefaultValue": "doublequotes",
+    "javascript.autoClosingTags": true,
+    "yaml.completion": true,  
+    "css.styleSheets": [
+    
+        " "
+    
+    ]
+}

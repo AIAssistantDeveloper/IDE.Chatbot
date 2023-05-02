@@ -1,0 +1,53 @@
+<!DOCTYPE language:html>
+<link href="txtstyle.css" rel="stylesheet" type="text/css" />
+ <html>
+  <head>
+    <meta charset="utf-8" />
+      <meta name="GPT$-IDE.html" content="GPT4-IDE" />
+
+        <title>Free Web IDE</title>
+
+    <script>
+      //*JavaScript*\\
+      const editor = document.getElementById('editor');
+      const plugins = document.querySelectorAll('.plugin');
+      const chatbotMessages = document.getElementById('chatbot-messages');
+      const chatbotForm = document.getElementById('chatbot-form');
+      const chatbot = document.getElementById('chatbot');
+    </script>
+      </head>
+
+  <body>
+    <header id="header">Code IDE</header>
+
+    <div id="editor-container">
+    <textarea id="editor"></textarea>
+
+      <div id="plugins-container">
+      <div id="plugins-header">Plugins</div>
+
+        <div class="plugin active-plugin" data-plugin="console">Console</div>
+
+        <div class="plugin active-plugin" data-plugin="terminal">Terminal</div>
+
+        <div class="plugin active-plugin" data-plugin="preview">Preview</div>
+  </div>
+        <div id="chatbot"></div>
+        <div id="chatbot-container">
+        <div id="chatbot-header">Chatbot</div>
+
+        <div id="chatbot-messages"></div>
+
+        <form id="chatbot-form">
+          <input
+            type="text"
+            id="chatbot-input"
+            placeholder="Type your message..."
+          />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
