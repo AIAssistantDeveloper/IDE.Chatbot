@@ -1,0 +1,175 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+<link href="txtstyle.css" rel="stylesheet" type="text/css" />
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <meta name="GPT$-IDE.html" content="GPT4-IDE" />
+  <head>
+    <script>
+      // JavaScript code
+      const editor = document.getElementById('editor');
+      const plugins = document.querySelectorAll('.plugin');
+      const chatbotMessages = document.getElementById('chatbot-messages');
+      const chatbotForm = document.getElementById('chatbot-form');
+      const chatbot = document.getElementById('chatbot');
+    </script>
+
+    <title>Code IDE</title>
+    <style>
+
+                /* CSS styling */
+
+            #body {
+               margin: 0;
+               padding: 0;
+               font-family: Arial, sans-serif;
+               background-color: #f1f1f1;
+            }
+
+      #header {
+      	background-color: #333;
+      	color: #fff;
+      	padding: 10px;
+      	text-align: center;
+      	font-size: 24px;
+      	font-weight: bold;
+      }
+
+      #editor-container {
+      	display: flex;
+      	flex-direction: row;
+      	align-items: stretch;
+      	height: calc(100vh - 50px);
+      }
+
+      #editor {
+      	flex-grow: 1;
+      	background-color: #fff;
+      	border: 1px solid #ccc;
+      	padding: 10px;
+      	box-sizing: border-box;
+      	font-size: 16px;
+      	line-height: 1.4;
+      }
+
+      #plugins-container {
+      	display: flex;
+      	flex-direction: column;
+      	align-items: stretch;
+      	width: 200px;
+      	background-color: #fff;
+      	border: 1px solid #ccc;
+      	padding: 10px;
+      	box-sizing: border-box;
+      }
+
+      #plugins-header {
+      	font-size: 18px;
+      	font-weight: bold;
+      	margin-bottom: 10px;
+      }
+
+      .plugin {
+      	display: block;
+      	margin-bottom: 10px;
+      	padding: 5px;
+      	background-color: #eee;
+      	border-radius: 5px;
+      	cursor: pointer;
+      	text-align: center;
+      }
+
+      .plugin:hover {
+      	background-color: #ddd;
+      }
+
+      .active-plugin {
+      	background-color: #333;
+      	color: #fff;
+      }
+
+      #chatbot-container {
+      	display: flex;
+      	flex-direction: column;
+      	align-items: stretch;
+      	width: 200px;
+      	background-color: #fff;
+      	border: 1px solid #ccc;
+      	padding: 10px;
+      	box-sizing: border-box;
+      }
+
+      #chatbot-header {
+      	font-size: 18px;
+      	font-weight: bold;
+      	margin-bottom: 10px;
+      }
+
+      #chatbot-messages {
+      	flex-grow: 1;
+      	background-color: #eee;
+      	border-radius: 5px;
+      	padding: 10px;
+      	margin-bottom: 10px;
+      	max-height: calc(100vh - 300px);
+      	overflow-y: auto;
+      }
+
+      form {
+      	display: flex;
+      	flex-direction: row;
+      	align-items: center;
+      }
+
+      input[type="text"] {
+      	flex-grow: 1;
+      	padding: 5px;
+      	border-radius: 5px;
+      	border: none;
+      }
+
+      button[type="submit"] {
+      	margin-left: 10px;
+      	padding: 5px 10px;
+      	background-color: #333;
+      	color: #fff;
+      	border-radius: 5px;
+      	border: none;
+      	cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="header">Code IDE</header>
+
+    <div id="editor-container">
+      <textarea id="editor"></textarea>
+
+      <div id="plugins-container">
+        <div id="plugins-header">Plugins</div>
+
+        <div class="plugin active-plugin" data-plugin="console">Console</div>
+
+        <div class="plugin active-plugin" data-plugin="terminal">Terminal</div>
+
+        <div class="plugin active-plugin" data-plugin="preview">Preview</div>
+      </div>
+      <div id="chatbot"></div>
+      <div id="chatbot-container">
+        <div id="chatbot-header">Chatbot</div>
+
+        <div id="chatbot-messages"></div>
+
+        <form id="chatbot-form">
+          <input
+            type="text"
+            id="chatbot-input"
+            placeholder="Type your message..."
+          />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
