@@ -5,9 +5,11 @@
 	background-color: #f1f1f1;
 }
 
-#header, .active-plugin, button[type="submit"] {
+#header,
+.active-plugin,
+button[type="submit"] {
 	background-color: #333;
-  	color: #fff;
+	color: #fff;
 }
 
 #header {
@@ -17,7 +19,9 @@
 	font-weight: bold;
 }
 
-#editor-container, #plugins-container, #chatbot-container {
+#editor-container,
+#plugins-container,
+#chatbot-container {
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
@@ -27,7 +31,9 @@
 	height: calc(100vh - 50px);
 }
 
-#editor, #plugins-container, #chatbot-container {
+#editor,
+#plugins-container,
+#chatbot-container {
 	background-color: #fff;
 	border: 1px solid #ccc;
 	padding: 10px;
@@ -40,7 +46,8 @@
 	line-height: 1.4;
 }
 
-#plugins-container, #chatbot-container {
+#plugins-container,
+#chatbot-container {
 	flex-direction: column;
 	width: 200px;
 }
