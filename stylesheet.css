@@ -1,64 +1,62 @@
-#body {
+/* Reset default styles */
+* {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
 	font-family: Arial, sans-serif;
 	background-color: #f1f1f1;
-}
-
-#header,
-.active-plugin,
-button[type="submit"] {
+  }
+  
+  /* Header styles */
+  #header {
 	background-color: #333;
 	color: #fff;
-}
-
-#header {
 	padding: 10px;
 	text-align: center;
 	font-size: 24px;
 	font-weight: bold;
-}
-
-#editor-container,
-#plugins-container,
-#chatbot-container {
+  }
+  
+  /* Container styles */
+  .container {
 	display: flex;
-	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: stretch;
-}
-
-#editor-container {
+	justify-content: center;
+  }
+  
+  /* Editor styles */
+  #editor-container {
 	height: calc(100vh - 50px);
-}
-
-#editor,
-#plugins-container,
-#chatbot-container {
+	flex: 1;
+  }
+  
+  #editor {
 	background-color: #fff;
 	border: 1px solid #ccc;
 	padding: 10px;
-	box-sizing: border-box;
-}
-
-#editor {
-	flex-grow: 1;
 	font-size: 16px;
 	line-height: 1.4;
-}
-
-#plugins-container,
-#chatbot-container {
-	flex-direction: column;
+	width: 100%;
+  }
+  
+  /* Plugins styles */
+  #plugins-container {
 	width: 200px;
-}
-
-#plugins-header {
+	margin-right: 20px;
+  }
+  
+  #plugins-header {
 	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: 10px;
-}
-
-.plugin {
+  }
+  
+  .plugin {
 	display: block;
 	margin-bottom: 10px;
 	padding: 5px;
@@ -66,39 +64,52 @@ button[type="submit"] {
 	border-radius: 5px;
 	cursor: pointer;
 	text-align: center;
-}
-
-.plugin:hover {
+  }
+  
+  .plugin:hover {
 	background-color: #ddd;
-}
-
-#chatbot-messages {
-	flex-grow: 1;
+  }
+  
+  /* Chatbot styles */
+  #chatbot-container {
+	width: 200px;
+  }
+  
+  #chatbot-messages {
 	background-color: #eee;
 	border-radius: 5px;
 	padding: 10px;
 	margin-bottom: 10px;
 	max-height: calc(100vh - 300px);
 	overflow-y: auto;
-}
-
-form {
+  }
+  
+  /* Form styles */
+  form {
 	display: flex;
-	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: center;
-}
-
-input[type="text"] {
-	flex-grow: 1;
+	justify-content: center;
+  }
+  
+  input[type="text"] {
+	flex: 1;
 	padding: 5px;
 	border-radius: 5px;
 	border: none;
-}
-
-button[type="submit"] {
-	margin-left: 10px;
+	margin-right: 10px;
+  }
+  
+  button[type="submit"] {
 	padding: 5px 10px;
 	border-radius: 5px;
 	border: none;
 	cursor: pointer;
-}
+	background-color: #333;
+	color: #fff;
+	transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+	background-color: #111;
+  }

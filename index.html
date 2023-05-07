@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <title>Free Web IDE Chatbot</title>
     <meta charset="UTF-8">
@@ -9,30 +8,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.18.3/swagger-ui.js"
       integrity="sha512-QiA9xKQEqLTj/SKEaQ43zGUPFbszSR9mg4wUrPAKtFX79c0qstoBTB8t82hsNTbpARA8Kk9ZSpGqr/8iHnKeMQ=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>  
-      document.addEventListener("DOMContentLoaded", function () {
-        const editor = document.getElementById("editor");
-        const plugins = document.querySelectorAll(".plugin");
-        const chatbotMessages = document.getElementById("chatbot-messages");
-        const chatbotForm = document.getElementById("chatbot-form");
-        const chatbot = document.getElementById("chatbot");
-      });
-      </script>
+    <script src="chatbot.js"></script>
   </head>
-
   <body>
     <header id="header">Code IDE</header>
     <div id="editor-container">
       <textarea id="editor"></textarea>
     </div>
-    
     <div id="plugins-container">
       <div id="plugins-header">Plugins</div>
       <div class="plugin active-plugin" data-plugin="console">Console</div>
       <div class="plugin active-plugin" data-plugin="terminal">Terminal</div>
       <div class="plugin active-plugin" data-plugin="preview">Preview</div>
     </div>
-
     <div id="chatbot-container">
       <div id="chatbot-header">Chatbot</div>
       <div id="chatbot-messages"></div>
