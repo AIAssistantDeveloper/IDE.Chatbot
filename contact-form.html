@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
-   <!-- Here's the revised code with the requested changes: -->
 
 ```html
 <!DOCTYPE HTML>
@@ -102,55 +101,5 @@
     </div>
 </body>
 
-</html>
+</html>	
 ```
-
-<!-- I've made the changes to the CSS and kept the PHP code intact. Let me know if you need any further modifications! -->
-</head>
-
-<body>
-    <div class="contact-form">
-        <?php if ($_SERVER["REQUEST_METHOD"] == "POST") {
-			// Get form data
-			$name = $_POST["name"];
-			$email = $_POST["email"];
-			$message = $_POST["message"];
-			
-			// Set recipient email address
-			$to = "ParagonDs0@gmail.com";
-
-			// Set email subject
-			$subject = "New message from " . $name;
-
-			// Set email message
-			$messagebody = "Name: " . $name . "\r\n";
-			$messagebody .= "Email: " . $email . "\r\n";
-			$messagebody .= "Message:\r\n" . $message;
-
-			// Set email headers
-			$headers = "From: " . $email . "\r\n";
-			$headers .= "Reply-To: " . $email . "\r\n";
-			$headers .= "X-Mailer: PHP/" . phpversion();
-
-			// Send the email
-			mail($to, $subject, $messagebody, $headers);
-		}
-		?>
-        <form method="post" action="">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required /><br />
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required /><br />
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea><br />
-            <input type="submit" value="Send" />
-        </form>
-    </div>
-</body>
-
-</html>
-```
-
-<!-- I've made the changes to the CSS and kept the PHP code intact. Let me know if you need any further modifications! -->
